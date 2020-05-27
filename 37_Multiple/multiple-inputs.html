@@ -1,0 +1,40 @@
+
+<html>
+
+<head>
+    <title>Multiple Inputs</title>
+</head>
+
+<body>
+      
+  First Name:
+  <br>
+  <input type="text" id="FirstName">
+  <br>
+  Last Name:
+  <br>
+  <input type="text" id="LastName">
+  <br>
+  Age:
+  <br>
+  <input type="text" id="Age">
+  <br>
+  <br>
+  <button onclick="SubmitValues()">Submit</button>
+
+<script type="text/javascript">
+function SubmitValues()
+{
+   var FirstName = document.getElementById("FirstName").value;
+   var LastName = document.getElementById("LastName").value;
+   var Age = document.getElementById("Age").value;
+
+   var OutputString = FirstName + "|" + LastName + "|" + Age
+
+   window.external.setResult(OutputString);
+   return true;
+}        
+</script>
+
+</body>
+</html>
